@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상속</title>
+<style>
+	.inherit-test{
+		color:deeppink;
+		background: #bbdefb;
+		padding:20px;
+		border:3px dashed purple;
+	}
+	.inherit-test p{
+		border:inherit;
+		color: blue;
+	}
+	/* 띄어 쓰기는 "자손" 요소 선택 */
+	.inherit-test strong{
+		color: red;
+	}
+	/* 띄어 쓰기는 "자식" 요소 선택 */
+	.inherit-test>strong{
+		color :green
+	}
+</style>
+</head>
+<body>
+	<div class="inherit-test">
+		<h1>Heading</h1>
+		<p>
+			Paragraph<strong>strong</strong>
+		</p>
+		<strong>div 안의 strong</strong>
+		<input type="button" value="Button">
+	</div>
+</body>
+</html>
