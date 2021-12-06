@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+h1::before {
+	content: "1. ";
+}
+
+h1::after {
+	content: " - default";
+}
+
+@media ( max-width :1280px) {
+	body {
+		background: #ffcdd2;
+		color:#ffffff;
+	}
+	h1::before{
+		content: "2. ";
+	}
+	h1::after{
+		content:" -1025px ~ 1280px";
+	}
+}
+
+@media ( max-width :1024px) {
+	body {
+		background: gray;
+		color:black;
+	}
+	h1::before{
+		content: "3. ";
+	}
+	h1::after{
+		content:"- 961px ~ 1024px";
+	}
+}
+
+@media ( max-width :960px) {
+	body {
+		background: #bbdefb;
+		color:green;
+	}
+	h1::before{
+		content: "4. ";
+	}
+	h1::after{
+		content:"- 769px ~ 960px";
+	}
+}
+
+
+@media ( max-width :768px) {
+	body {
+		background: #b2dfdb;
+		color:red;
+		font-size: 12px;
+	}
+	h1::before{
+		content: "5. ";
+	}
+	h1::after{
+		content:"- 577px ~ 768px";
+	}
+}
+
+
+@media ( max-width :576px) {
+	body {
+		background: #e6ee9c;
+		color:blue;
+	}
+	h1::before{
+		content: "6. ";
+	}
+	h1::after{
+		content:"- 0px ~ 768px";
+	}
+}
+
+</style>
+</head>
+<body>
+	<h1>현재 적용되고 있는 스타일</h1>
+</body>
+</html>

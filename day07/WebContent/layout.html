@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/* 가상요소  */
+/* 해당 요소 앞에 넣고싶은 속성 */
+h1::before {
+	content: "1. ";
+}
+
+h1::after {
+	content: " - 기본";
+}
+
+/* 데스크탑 */
+/* 화면 너비 0~1280px */
+@media ( max-width :1280px) {
+	body {
+		background: #ffcdd2;
+		color:#ffffff;
+	}
+	h1::before{
+		content: "2. ";
+	}
+	h1::after{
+		content:" -1025px ~ 1280px";
+	}
+}
+/* 데스크탑 */
+/* 화면 너비 0~1024px */
+@media ( max-width :1024px) {
+	body {
+		background: gray;
+		color:black;
+	}
+	h1::before{
+		content: "3. ";
+	}
+	h1::after{
+		content:"- 961px ~ 1024px";
+	}
+}
+
+/* 노트북 */
+/* 화면 너비 0~960px */
+@media ( max-width :960px) {
+	body {
+		background: #bbdefb;
+		color:green;
+	}
+	h1::before{
+		content: "4. ";
+	}
+	h1::after{
+		content:"- 769px ~ 960px";
+	}
+}
+
+/* 태블릿 */
+/* 화면 너비 0~768px */
+@media ( max-width :768px) {
+	body {
+		background: #b2dfdb;
+		color:red;
+	}
+	h1::before{
+		content: "5. ";
+	}
+	h1::after{
+		content:"- 577px ~ 768px";
+	}
+}
+
+/* 모바일 */
+/* 화면 너비 0~576px */
+@media ( max-width :576px) {
+	body {
+		background: #e6ee9c;
+		color:blue;
+	}
+	h1::before{
+		content: "6. ";
+	}
+	h1::after{
+		content:"- 0px ~ 768px";
+	}
+}
+
+</style>
+</head>
+<body>
+	<h1>미디어 쿼리</h1>
+	<p>미디어 쿼리는 화면 크기에 따른 각각의 속성 값을 지정하여, 여러개의 화면을 구성하는 기술이다</p>
+	<p>
+		<!-- @media only all and (조건문) { 스타일 적용문 } -->
+	<ul>
+		<li>@media : 미디어 쿼리가 시작됨을 표시</li>
+		<li>only : 미디어 쿼리 구문을 해석하라는 명령어</li>
+		<li>all : 미디어 쿼리를 해석해야하는 대상을 나타냄</li>
+		<li>and : 앞과 뒤의 조건을 나타낸다.</li>
+		<li>(조건문) : 스타일을 적용시킬 대상 기기에 대한 조건</li>
+		<li>스타일 적용문 : 조건에 따른 실행할 속성 설정</li>
+	</ul>
+	</p>
+</body>
+</html>
