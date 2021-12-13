@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>scope</title>
+</head>
+<body>
+	<script>
+		var num = 10;
+		function scope() {
+			var num2 = 20;
+			console.log(num2);
+			console.log(num);
+		}
+		console.log(num2);
+		console.log(num)
+	</script>
+</body>
+</html>
