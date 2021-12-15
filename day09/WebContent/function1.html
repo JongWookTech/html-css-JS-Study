@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+<script>
+	function count(){
+		for(let i = 0; i < 10; i++){
+			console.log('i',i)
+		}		
+	}
+	(function count2(){
+		for(let i =10; i<20; i++){
+			console.log('i', i)
+		}
+	})();
+	// 함수가 코드 내에 존재한다 하더라도 
+	// 호출하지 않으면 동작하지 않는다.
+	count();
+</script>
+</html>

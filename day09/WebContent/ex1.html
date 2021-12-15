@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>숫자를 한글로 변경</title>
+</head>
+<body>
+	<div></div>
+	<fieldset>
+		<legend>숫자를 한글로 변경</legend>
+		<textarea rows="3" cols="40" id="result">결과 표시 부분</textarea>
+		<br> <input type="text" id="num"><br>
+		<button onclick="changeNum();">숫자를 한글로 변경</button>
+		<button onclick="changeWord();">한글을 숫자로 변경</button>
+		
+	</fieldset>
+	<script>
+		//배열로 바꿀 값들 저장
+		let arr = [ "공", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구" ];
+	 	document.write(arr.indexOf("구"));
+		var num = document.getElementById("num");
+		// 정답 넣을 곳
+		var resultTag = document.getElementById("result");
+		//함수 생성
+		
+		function changeNum() {
+			// 함수 내에 선언해주는 이유는 버튼을 클릭할때마다 누적 덧셈이 이루어짐을 막기 위함이다.
+			var result = "";
+			// 내가 적은 값의 길이만큼 돌면서 
+			for (let i = 1; i <= num.value.length; i++) {
+				// 한글자씩 잘라 arr의 index로 찾는다.
+				result += arr[num.value.charAt(i - 1)];
+			}
+			resultTag.innerHTML = result;
+		}
+		
+		function changeWord(){
+			var result = "";
+			for (let i = 1; i <= num.value.length; i++) {
+				result += arr.indexOf(num.value.charAt(i-1));
+			}
+			resultTag.innerHTML = result;
+		}
+	</script>
+</body>
+</html>

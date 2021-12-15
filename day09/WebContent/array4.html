@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>arraySort</title>
+</head>
+<body>
+
+</body>
+<script>
+arr = [4,11,2,3,1,8,10,1111];
+arr.sort()
+document.write("일반 정렬 : " +arr + "<br>")
+
+arr.sort(function(a,b){
+	return a-b;
+});
+document.write("오름차순 정렬 : " +arr + "<br>");
+
+arr.sort(function(a,b){
+	return b-a;
+});
+document.write("내림차순 정렬 : " +arr + "<br>");
+
+for(let idx in arr){
+	document.write(arr[idx] + ", ")
+}
+
+for(let data of arr){
+	document.write(data + ", ")
+}
+
+let mycar = {brand : "Ferrari", color : "Red", price:50000};
+
+for(let data2 in mycar){
+	document.write(mycar[data2])
+}
+</script>
+</html>

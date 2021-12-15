@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array2</title>
+</head>
+<body>
+
+</body>
+<script>
+	let arr = [10, "안녕", 7.24, true, 180];
+	document.write("arr : " + arr + "<hr>")
+	document.write("<strong>pop()</strong> : 마지막에 있는 값을 제거하면서 리턴 : <strong>"+ arr.pop() + "</strong><br>")
+	document.write("arr : " + arr + "<hr>")
+	
+	document.write("<strong>shift()</strong> : 첫번째에 있는 값을 제거하면서 리턴 : <strong>" + arr.shift() + "</strong><br>")
+	document.write("arr : " + arr + "<hr>")
+	
+	document.write("<strong>splice()</strong> : splice(시작 index, 제거할 요소 수) : <strong>" + arr.splice(1,2) + "</strong><br>");
+	document.write("arr : " + arr + "<hr>")
+
+	document.write("<strong>splice()</strong> : splice(시작 index, 제거할 요소 수, 추가할 요소, 추가할 요소, ...) : <strong>" + arr.splice(1, 0, "추가 요소") + "</strong><br>");
+	document.write("arr : " + arr + "<hr>")
+
+</script>
+</html>
