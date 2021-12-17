@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel ="stylesheet" href = "object_task.css">
+</head>
+<body>
+	<fieldset>
+		<legend>자동차 주행</legend>
+		<textarea id = "statusWord">현재 상태 표시</textarea>
+		<img id ="statusImg" src= "출발전.png">
+		<input id = "pwd" placeholder = "비밀번호 입력">
+		<button id ="start" onclick = "engineStart();">시동 켜기</button>
+		<button id = "stop" onclick = "engineStop();">시동 끄기</button>
+		<button onclick = "history.go(0);">초기화</button>
+	</fieldset>
+</body>
+<script>
+	let pw = window.prompt("비밀번호를 입력하세요");
+	const imgTag = document.getElementById("statusImg");
+	const statusTag = document.getElementById("statusWord")
+	const pwValue = document.getElementById("pwd");
+	const startBtn = document.getElementById("start")
+	const stopBtn = document.getElementById("stop")
+	
+	var engine = 0
+	
+	let count = 0;
+	
+	// 시동 켜기
+	function engineStart(){
+		
+		if(engine == 1){
+			statusTag.innerHTML = "시동이 이미 켜져 있습니다."
+		} else if(pwValue.value == pw && engine != 1){
+			imgTag.src = "시동켜기.gif";
+			statusTag.innerHTML = "시동 켜짐"
+			count = 0;
+			engine = 1;
+		} else {
+			count++;
+			statusTag.innerHTML = "비밀번호 오류 : " + count + "회";
+			if(count == 3){
+				imgTag.src = "경찰.png";
+				startBtn.style.visibility = "hidden";
+				stopBtn.style.visibility = "hidden";
+			}
+		}
+	}
+	
+	function engineStop(){
+		if(engine == 2){
+			statusTag.innerHTML = "시동이 이미 꺼져 있습니다."
+		} else {
+			imgTag.src = "시동끄기.gif";
+			statusTag.innerHTML = "시동 꺼짐";
+			engine = 2;
+		}
+	}
+	
+	
+	
+</script>
+</html>

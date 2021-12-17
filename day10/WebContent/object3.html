@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	function Person(name, age, gender){
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		
+		this.walk = function(){
+			console.log(this.name + "이 걷는다");
+		}
+	}
+	
+	// Person 함수의 prototype 객체에 type = "human" 이라는 생성자 생성
+	Person.prototype.type = "human";
+	
+	// 객체를 생성한다.
+	// 하지만 type 생성자를 매개변수로 넘겨주지 않는다.
+	let DoCoding = new Person("해보자 코딩","24","남성");
+	
+	// DoCoding 뒤집어보기
+	for(let data in DoCoding){
+		console.log(DoCoding[data]);		
+	}
+	
+	
+</script>
+</html>

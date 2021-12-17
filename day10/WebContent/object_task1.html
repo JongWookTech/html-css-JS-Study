@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.green{
+		color : green;	
+	}
+	.blue {
+		color : blue;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li id = "1">일</li>	
+		<li id = "2">이</li>	
+		<li id = "3">삼</li>	
+		<li id = "4">사</li>	
+		<li id = "5">오</li>	
+	</ul>
+	<input type = "button" value = "색깔 변하기" onclick = "changeColor();">
+</body>
+<script>
+	// 짝수번째에 있는 <li> 들을 파란색으로 변화시키기
+	// 홀수번째에 있는 <li> 들은 색깔을 초록색으로 변화시키기
+	function changeColor(){
+		//document.getElementById("1").className = "red";
+		for(let i = 1 ; i < 6; i++){
+			let liTag = document.getElementById(i);
+			if(i%2 == 0){
+				// 짝수 일때
+				liTag.className = "blue";
+			} else {
+				// 홀수 일때
+				liTag.className = "green";
+			}
+			
+		}
+	}
+</script>
+</html>
