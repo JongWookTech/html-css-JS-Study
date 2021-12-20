@@ -41,6 +41,7 @@
 				areaTag.innerHTML = "시동 켜짐";
 				imgTag.src = "시동켜기.gif";
 				this.engine = true;
+				this.count = 0;
 			} else if(this.pw != inputTag.value){
 				this.count++;
 				areaTag.innerHTML = "비밀번호 오류 : " + this.count + "회" ;
