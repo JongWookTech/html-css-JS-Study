@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>location 2</title>
+</head>
+<body>
+	<button onclick="openPage()">새로운 문서 열기</button>
+	<p id ="text"><p>
+</body>
+<script>
+	function openPage(){
+		// 지정한 url로 페이지 이동
+		location.replace("window2.html");
+	}
+	document.getElementById("text").innerHTML = "현재 브라우저 히스토리 개수 : " + history.length + "개";
+</script>
+</html>

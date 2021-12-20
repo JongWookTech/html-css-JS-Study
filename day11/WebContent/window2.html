@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="myForm">
+		<p>
+			<label>네이버<input type="radio" value ="naver" name ="site" checked></label>
+		</p>
+		<p>
+			<label>다음<input type="radio" value ="daum" name ="site"></label>
+		</p>
+		<p>
+			<label>구글<input type="radio" value ="google" name ="site"></label>
+		</p>
+		<p>
+			<input type="button" onclick="sendit();" value = "페이지 이동">
+		</p>
+	</form>
+</body>
+<script>
+	function sendit(){
+		// form 태그 안에 있는 요소들을 가져온다.
+		let myForm = document.myForm;
+		//myForm태그 안에 checked인 상태로 보내진 site라는 name을 가진 요소의 value를 가져온다.
+		if(myForm.site.value == "naver"){
+			// www.naver.com으로 보낸다.
+			location.href = "https://www.naver.com";
+		} else if(myForm.site.value == "daum"){
+			location.href = "https://daum.net";
+		} else if(myForm.site.value == "google"){
+			location.href = "https://google.com"
+		}
+	}
+</script>
+</html>
