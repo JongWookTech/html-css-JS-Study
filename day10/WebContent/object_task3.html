@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel ="stylesheet" href = "object_task.css">
+</head>
+<body>
+	<fieldset>
+		<legend>자동차 주행</legend>
+		<textarea id="status">현재 상태 표시</textarea>
+		<img id ="image" src= "출발전.png">
+		<input id ="pw" placeholder = "비밀번호 입력">
+		<button class = "btn" onclick = "mycar.engineStart();">시동 켜기</button>
+		<button class = "btn" onclick = "mycar.engineStop();">시동 끄기</button>
+		<button onclick = "history.go(0);">초기화</button>
+	</fieldset>
+</body>
+<script>
+	//이미지 태그.src = "값"; 사진 바꾸기
+	//태그.style.visibility = "hidden" : 그 태그 객체 숨기기
+	//태그.style.visibility = "visible" : 그 태그 객체 숨기기
+
+	const imgTag = document.getElementById("image")
+	const inputTag = document.getElementById("pw")
+	const areaTag = document.getElementById("status")
+	const btnTag = document.getElementsByClassName("btn");
+	
+	function Car(){
+		this.brand = "Ferarri";
+		this.color = "Red";
+		this.price = 65000;
+		this.engine = false;
+		this.count = 0;
+		
+		this.engineStart = function(){
+			// 시동이 켜져있으면 상태 띄움
+			if(this.engine){
+				areaTag.innerHTML = "시동이 이미 켜져있습니다."
+			} else if(this.pw == inputTag.value){
+				areaTag.innerHTML = "시동 켜짐";
+				imgTag.src = "시동켜기.gif";
+				this.engine = true;
+			} else if(this.pw != inputTag.value){
+				this.count++;
+				areaTag.innerHTML = "비밀번호 오류 : " + this.count + "회" ;
+				if(this.count == 3){
+					areaTag.innerHTML = "경찰 출동";
+					imgTag.src = "경찰.png";
+					for(let data in btnTag){
+						btnTag[data].style.visibility = "hidden";
+					}
+				}
+			}
+		}
+		
+		this.engineStop = function(){
+			//시동이 꺼져있다면
+			if(!this.engine){
+				areaTag.innerHTML = "시동이 이미 꺼져있습니다."	
+			} else{
+				areaTag.innerHTML = "시동 꺼짐";
+				imgTag.src = "시동끄기.gif";
+				this.engine = false;
+			}
+		}
+		
+	}
+	
+	let mycar = new Car();
+	mycar.pw = window.prompt("비밀번호를 입력하세요");
+	
+</script>
+</html>
