@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그명으로 요소 찾기</title>
+</head>
+<body>
+	<div id= "div1">
+	<input id ="input1" type ="text"/>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>	
+	</div>
+	
+	<div class = "div2">
+		<span> div 2 : 제 1영역</span>
+		<span> div 2 : 제 2영역</span>
+	</div>
+	<label><input type="radio" value ="1" name ="byname"></label>
+	<label><input type="radio" value ="2" name ="byname"></label>
+	<label><input type="radio" value ="3" name ="byname"></label>
+	<hr>
+</body>
+<script>
+	let tagName = document.getElementsByTagName("li");
+	document.write("getElementsByTagName 반환 : " + tagName + "<br>");
+	
+	let id = document.getElementById("input1");
+	document.write("getElementById 반환 : " + id + "<br>");
+	
+	let className = document.getElementsByClassName("div2");
+	document.write("getElementsByClassName 반환 : " + className + "<br>");
+	
+	let byName = document.getElementsByName("byname")
+	document.write("getElementsByName 반환 : " + byName + "<br>");
+	
+	let queryAll = document.querySelectorAll("li")
+	document.write("querySelectorAll 반환 : " + queryAll + "<br>");
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<input type = "text" value = "해보자" name = "byname">
+		<input type = "text" value = "코딩을" name = "byname">
+		<input type = "text" value = "열심히" name = "byname">
+	</div>
+</body>
+<script>
+	let name = document.getElementsByName("byname")
+	for(let i = 0; i < 3; i++){	
+		document.write("name의 값 : " + name[i].value + "<br>")
+	}
+</script>
+</html>

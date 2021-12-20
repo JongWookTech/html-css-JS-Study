@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>id로 요소 찾기</title>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>1번째</li>
+			<li>2번째</li>
+			<li id = "third">3번째</li>
+			<li>4번째</li>
+			<li>5번째</li>
+		</ul>		
+	</div>
+</body>
+<script>
+	let third  = document.getElementById("third");
+	third.innerHTML = "바뀐 요소입니다."
+	third.style.color = "red";
+</script>
+</html>

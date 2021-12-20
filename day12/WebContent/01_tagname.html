@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>1번째 아이템</li>
+			<li>2번째 아이템</li>
+			<li>3번째 아이템</li>
+			<li>4번째 아이템</li>
+			<li>5번째 아이템</li>
+		</ul>
+	</div>
+</body>
+<script>
+	let list = document.getElementsByTagName("li")
+	for(let i = 0; i < 5; i++){
+		list[i].innerHTML = "바뀐 내용" + (i+1)
+		list[i].style.color = "red";
+	}
+</script>
+</html>

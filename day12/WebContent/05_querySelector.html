@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<ul>
+			<li id = "one" class="num">1번째</li>
+			<li id = "two">2번째</li>
+			<li id = "three" class="num">3번째</li>
+			<li id = "four">4번째</li>
+			<li id = "five" class="num">5번째</li>
+		</ul>
+	</div>
+	<div>
+	
+	
+	</div>
+</body>
+<script>
+	let num = document.querySelectorAll(".num");
+	for(let i = 0; i < 3; i++){
+		num[i].innerHTML = "요소 수정";
+		num[i].style.color = "red";	
+	}
+</script>
+</html>

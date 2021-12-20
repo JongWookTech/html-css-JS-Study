@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<nav id ="node">
+			빈칸이여도 text node이다.
+		<ul>
+			<li>내용1</li>
+			<li>내용2</li>
+			<li>내용3</li>
+		</ul>	
+			빈칸이여도 text node이다
+		</nav>
+	</div>
+</body>
+<script>
+	let tree = document.getElementById("node");
+	console.log("nodeName : " + tree.parentNode.nodeName)
+	tree.childNodes[1].childNodes[2].nodeValue = "추가 된 요소입니다!!!!!!!!!";
+</script>
+</html>

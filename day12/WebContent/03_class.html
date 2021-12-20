@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<ul>
+			<li class = "num">1번째</li>
+			<li>2번째</li>
+			<li class = "num">3번째</li>
+			<li>4번째</li>
+			<li class ="num">5번째</li>			
+		</ul>
+	</div>
+</body>
+<script>
+	let num = document.getElementsByClassName("num");
+	
+	for(let i = 0; i < 3; i++){
+		num[i].innerHTML = "바뀐 요소입니다.";
+		num[i].style.color = "red";
+	}
+</script>
+</html>
