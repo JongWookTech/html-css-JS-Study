@@ -19,11 +19,9 @@
 		console.log(idx,":",data)
 	})
 	
-	let cnt = 1;
 	
-	$(".li").each(function(){
-		$(this).text(cnt+"번째 변경된 문자열");
-		cnt++;
+	$(".li").each((idx,data)=>{
+		$(data).text((idx+1)+"번째 변경된 문자열");
 	})
 </script>
 </html>
